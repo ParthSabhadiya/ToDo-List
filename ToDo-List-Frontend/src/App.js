@@ -19,19 +19,19 @@ function App() {
   }, []);
 
   const fecthTodos = async () => {
-    const res = await fetch('http://localhost:8080/get')
+    const res = await fetch('https://todo-list-app-atec.herokuapp.com/get')
     const data = await res.json();
     return data.todos;
   }
 
   const fetchTodo = async (id) => {
-    const res = await fetch(`http://localhost:8080/get/${id}`)
+    const res = await fetch(`https://todo-list-app-atec.herokuapp.com/get/${id}`)
     const data = await res.json();
     return data.todo
   }
 
   const addTodo = async (todo) => {
-    const res = await fetch('http://localhost:8080/post', {
+    const res = await fetch('https://todo-list-app-atec.herokuapp.com/post', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -46,7 +46,7 @@ function App() {
   }
 
   const removeTodo = async (id) => {
-    const res = await fetch(`http://localhost:8080/delete/${id}`, {
+    const res = await fetch(`https://todo-list-app-atec.herokuapp.com/delete/${id}`, {
       method: 'DELETE',
     });
 
@@ -60,7 +60,7 @@ function App() {
      const todoToToggle = await fetchTodo(id);
     const updatedTodo = { status: !todoToToggle.status }
 
-    const res = await fetch(`http://localhost:8080/put/${id}`, {
+    const res = await fetch(`https://todo-list-app-atec.herokuapp.com/put/${id}`, {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json',
