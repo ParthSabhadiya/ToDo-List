@@ -8,7 +8,7 @@
     "build": "cd ToDo-List-Frontend && npm run build",
     "install-client": "cd ToDo-List-Frontend && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
-    "start": "nodemon app.js",
+    "start": "npm install nodemon && nodemon app.js",
     "start-server": "node app.js"
   },   
   "author": "Parth Sabhadiya",
