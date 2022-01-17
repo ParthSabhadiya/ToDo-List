@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const crudRoutes = require('./routes/crud');
 
 const app = express();
+const PORT = process.env.PORT || 8080; 
 const MONGODBURL = "mongodb+srv://Sp0511:Hm704642@cluster0.wjeak.mongodb.net/ToDoList";
 app.use(express.json());
 
@@ -27,10 +28,15 @@ app.use((error, req, res, next) => {
 
 });
 
-mongoose.connect(MONGODBURL)
+mongoose.connect(process.env.MONGODB_URI || MONGODBURL)
     .then(result => {        
         app.listen(8080);
     })
     .catch(error => {
         console.log(error);
     });
+    
+    
+if (process.env.NODE_ENV === 'production') {
+        app.use(express.static('client/build'));
+}

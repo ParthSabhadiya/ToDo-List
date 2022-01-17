@@ -1,0 +1,92 @@
+.Delete-button{
+    margin-right: 15px;
+}
+
+.todo{
+    display: flex;
+    .block{
+        width: 500px;
+        // border-radius: 10%;
+        padding: 30px;
+        border: 1px solid #808000;
+
+        p{
+            text-align: center;
+        }
+    }
+
+    .br-10{
+        border-radius: 10%;
+    }
+    span{
+        width: 300px;
+        word-break: break-word;
+    }    
+    .done-icon{
+        width: 40px;
+        height: 28px;
+        cursor: pointer;
+    }
+}
+
+.block{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    padding: 15px;
+    
+    h2{
+        text-align: center;
+    }
+
+    .card{
+        border: 1px solid black;
+        margin-bottom: 10px;
+    }
+}
+
+.add-new-todo{
+    margin: auto;
+    width: 50%;
+    border: 2px solid #808000;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+
+    .add-button{
+        color:  #808000;
+        background: #BAB86C;
+        border: none;
+        border-radius: 21px;
+        padding: 10px 20px 10px 20px;
+    }
+}
+
+.navbar-brand{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+
+.bg-light{
+    // background: #BAB86C !important;
+     border: 1px solid #808000;
+    span{
+        color: #808000 !important;
+    }
+}
+::placeholder {
+    color:  #808000;
+    opacity: 1; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color:  #808000;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color:  #808000;
+  }
+
+  input {
+    -webkit-appearance:  none;
+    -moz-appearance: none;
+}
