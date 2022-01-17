@@ -8,9 +8,10 @@
     "build": "cd ToDo-List-Frontend && npm run build",
     "install-client": "cd ToDo-List-Frontend && npm install",
     "heroku-postbuild": "npm run install-client && npm run build",
-    "start": "npm install nodemon && nodemon app.js",
+    "start": "node app.js",
+    "client": "cd ToDo-List-Frontend && npm start",
     "start-server": "node app.js"
-  },   
+  },
   "author": "Parth Sabhadiya",
   "dependencies": {
     "body-parser": "^1.19.0",
@@ -20,6 +21,6 @@
     "sass": "^1.48.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.14"
+    "nodemon": "^2.0.15"
   }
 }
