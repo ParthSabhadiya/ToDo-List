@@ -56,7 +56,7 @@ function App() {
   }
 
   const markTodo = async (id) => {
-    console.log(id)
+    // console.log(id)
      const todoToToggle = await fetchTodo(id);
     const updatedTodo = { status: !todoToToggle.status }
 

@@ -9,7 +9,7 @@
         // border-radius: 10%;
         padding: 30px;
         border: 1px solid #808000;
-
+        border-radius: 20px;
         p{
             text-align: center;
         }
@@ -46,7 +46,7 @@
 .add-new-todo{
     margin: auto;
     width: 50%;
-    border: 2px solid #808000;
+    border: 1px solid #808000;
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -70,7 +70,7 @@
     // background: #BAB86C !important;
      border: 1px solid #808000;
     span{
-        color: #808000 !important;
+        color: #383801 !important;
     }
 }
 ::placeholder {

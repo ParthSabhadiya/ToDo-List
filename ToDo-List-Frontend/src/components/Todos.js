@@ -7,7 +7,7 @@ const Todos = ({ todos, removeTodo, markTodo }) => {
 
 {/* Current */}
       <div className='block' >
-        <h2>Current Task</h2>
+        <h2>{ todos.length > 1 ? "Current Tasks" : "Current Task"}</h2>
 
         {!(todos.find(item => {
           return item.status === false
@@ -38,7 +38,7 @@ const Todos = ({ todos, removeTodo, markTodo }) => {
 
 {/* Finished task */}
       <div className='block'  >
-        <h2>Finished Task</h2>
+        <h2>{ markTodo.length > 1 ? "Finished Tasks" : "Finished Task"}</h2>
 
         {!(todos.find(item => {
           return item.status === true
