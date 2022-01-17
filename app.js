@@ -38,5 +38,5 @@ mongoose.connect(process.env.MONGODB_URI || MONGODBURL)
     
     
 if (process.env.NODE_ENV === 'production') {
-        app.use(express.static('client/build'));
+        app.use(express.static('ToDo-List-Frontend/build'));
 }
