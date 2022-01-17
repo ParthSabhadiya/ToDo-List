@@ -5,7 +5,7 @@ const Todo = ({ todo, removeTodo, markTodo }) => {
     <div className="todo" >
       <span style={{ textDecoration: todo.status ? "line-through" : "" }}>{todo.name}</span>
       <div>
-        <Button variant="outline-danger" className='Delete-button' onClick={() => removeTodo(todo.id)}>Delete</Button>
+        <Button vapriant="outline-danger" className='Delete-button' onClick={() => removeTodo(todo.id)}>Delete</Button>
         <Button variant="outline-primary" onClick={() => markTodo(todo.id)}>{(!todo.status ? "Done" : "Reopen")}</Button>
       </div>
     </div>

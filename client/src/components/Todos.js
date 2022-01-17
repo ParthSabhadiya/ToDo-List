@@ -3,8 +3,13 @@ import { Card } from 'react-bootstrap';
 
 const Todos = ({ todos, removeTodo, markTodo }) => {
   return (
-    <div>
-      <h2>Current Task</h2>
+    <div className='todo'>
+       
+      <div >
+           { todos.find(item=>{
+              return item.status === false
+            }) ? <h2>Current Task</h2> : <></>
+           }
           {todos.map(todo => (
             <div>
               
@@ -24,6 +29,8 @@ const Todos = ({ todos, removeTodo, markTodo }) => {
             </div>
             
           ))}
+          </div>
+          <div>
          { 
             todos.find(item=>{
               return item.status === true
@@ -42,13 +49,14 @@ const Todos = ({ todos, removeTodo, markTodo }) => {
                     removeTodo={removeTodo}
                     />
                   </Card.Body>
-                </Card> : <p></p>)
+                </Card> : <></>)
               }
               
               
             </div>
             
           ))}
+          </div>
         </div>
   )
 }

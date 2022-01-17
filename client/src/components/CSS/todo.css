@@ -1,3 +1,7 @@
 .Delete-button{
     margin-right: 15px;
 }
+
+.todo{
+    display: flex;
+}
