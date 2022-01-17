@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "cd ToDo-List-Frontend && npm run build",
     "install-client": "cd ToDo-List-Frontend && npm install",
-    "heroku-postbuild": "npm run install-client && npm run build && npm run client",
+    "heroku-postbuild": "npm run install-client && npm run build",
     "start": "node app.js",
     "client": "cd ToDo-List-Frontend && npm start",
     "start-server": "node app.js"
