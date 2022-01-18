@@ -2,7 +2,7 @@ import Todo from './Todo';
 import { Card } from 'react-bootstrap';
 
 const Todos = ({ todos, removeTodo, markTodo }) => {
-  console.log("todos",todos.length, markTodo.length)
+  // console.log("todos",todos.length, markTodo.length)
   return (
     <div className='todo'>
 

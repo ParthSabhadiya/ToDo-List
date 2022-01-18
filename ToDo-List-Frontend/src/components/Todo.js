@@ -3,8 +3,8 @@ import { BsFillTrashFill } from 'react-icons/bs'
 import { IoCheckmarkDoneCircle } from 'react-icons/io5'
 import { VscIssueReopened } from "react-icons/vsc";
 import { Tooltip, OverlayTrigger } from 'react-bootstrap';
-
 import './CSS/todo.scss'
+
 const Todo = ({ todo, removeTodo, markTodo }) => {
 
   return (
@@ -20,11 +20,11 @@ const Todo = ({ todo, removeTodo, markTodo }) => {
           )}
           placement="bottom"
         >
-          <Button variant="light" onClick={() => markTodo(todo.id)}>          
-          {!todo.status ?
-            <IoCheckmarkDoneCircle className='done-icon'  /> :
-            <VscIssueReopened className='done-icon'  onClick={() => markTodo(todo.id)} />
-          }
+          <Button variant="light" onClick={() => markTodo(todo.id)}>
+            {!todo.status ?
+              <IoCheckmarkDoneCircle className='done-icon' /> :
+              <VscIssueReopened className='done-icon' onClick={() => markTodo(todo.id)} />
+            }
           </Button>
 
         </OverlayTrigger>
@@ -45,9 +45,3 @@ const Todo = ({ todo, removeTodo, markTodo }) => {
 }
 
 export default Todo;
-
-
-{/* <img src={MdDone} alt="Done" />
-        <img src={ImCross} alt="Delete" /> */}
-{/* <Button vapriant="outline-danger" className='Delete-button' onClick={() => removeTodo(todo.id)}>Delete</Button> */ }
-{/* <Button variant="outline-primary" onClick={() => markTodo(todo.id)}>{(!todo.status ? "Done" : "Reopen")}</Button> */ }

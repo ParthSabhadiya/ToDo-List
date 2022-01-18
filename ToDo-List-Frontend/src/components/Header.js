@@ -3,9 +3,9 @@ import { Navbar, Container } from 'react-bootstrap';
 const Header = () => {
     return (
         <div>
-            <Navbar bg="light" >
+            <Navbar>
                 <Container className="justify-content-center">
-                <Navbar.Brand>Todo List App</Navbar.Brand>
+                    <Navbar.Brand style={{color:'white',fontWeight: 500}}>Your Todo List</Navbar.Brand>
                 </Container>
             </Navbar>
         </div>

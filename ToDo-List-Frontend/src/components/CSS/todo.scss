@@ -6,9 +6,9 @@
     display: flex;
 
     .block {
-        width           : 500px;
-        padding         : 30px;
-        border-radius   : 20px;
+        width        : 500px;
+        padding      : 30px;
+        border-radius: 20px;
 
         p {
             text-align: center;
@@ -22,6 +22,7 @@
     span {
         width     : 250px;
         word-break: break-word;
+        color: white;
     }
 
     .done-icon {
@@ -35,13 +36,18 @@
     }
 }
 
+.block::-webkit-scrollbar {
+    display: none;
+}
+
 .block {
     box-shadow      : rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
     padding         : 15px;
     background-color: #8393a5;
-
+    overflow-y: scroll;
     h2 {
         text-align: center;
+        color: white;
     }
 
     .card {
@@ -63,30 +69,46 @@
         background   : #bab86c;
         border-radius: 12px;
     }
+
     .finished-card-body-background {
-         background   : #3fe2a4;
-         border-radius: 12px;       
+        background   : #3fe2a4;
+        border-radius: 12px;
     }
 }
 
 .add-new-todo {
-    margin         : auto;
-    width          : 50%;
-    padding        : 10px;
-    display        : flex;
-    justify-content: space-between;
+    margin            : auto;
+    width             : 50%;
+    padding           : 10px;
+    display           : flex;
+    // justify-content: space-between;
+
 
     .add-button {
-        color        : #3c3c02;
+       // color        : #3c3c02;
+       color: white;
+       font-weight: 600;
         background   : #BAB86C;
         border       : none;
-        border-radius: 21px;
-        padding      : 10px 20px 10px 20px;
+        border-radius: 12px;
+        padding      : 8px;
+        box-shadow   : rgba(0, 0, 0, 0.35) 0px 8px 12px;
+    }
+
+    input {
+        background-color: #8e9eab;
+        border          : none;
+        box-shadow      : rgba(0, 0, 0, 0.35) 0px 8px 12px;
+        height          : 40px;
+        color: white;
+        form-control:focus{
+            color: white;
+        }
     }
 }
 
 .navbar-brand {
-    font-size  : 40px;
+    font-size  : 36px;
     font-weight: bold;
 }
 
@@ -100,24 +122,28 @@
 }
 
 ::placeholder {
-    color  : #808000;
+   // color  : #808000;
+   color: white;
     opacity: 1;
     /* Firefox */
 }
 
 :-ms-input-placeholder {
     /* Internet Explorer 10-11 */
-    color: #808000;
+   // color: #808000;
+   color: white;
 }
 
 ::-ms-input-placeholder {
     /* Microsoft Edge */
-    color: #808000;
+   // color: #808000;
+   color: white;    
 }
 
 input {
     -webkit-appearance: none;
     -moz-appearance   : none;
+    
 }
 
 .action-buttons {

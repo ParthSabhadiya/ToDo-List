@@ -5,17 +5,16 @@ import Header from './components/Header';
 import AddToDo from './components/AddToDo';
 import Todos from './components/Todos';
 
-
 function App() {
   const [todos, setTodos] = useState([]);
 
   useEffect(() => {
-	  const getTodos = async () => {
-		  const todosFromServer = await fecthTodos();
-		  setTodos(todosFromServer);
-	  }
+    const getTodos = async () => {
+      const todosFromServer = await fecthTodos();
+      setTodos(todosFromServer);
+    }
 
-	  getTodos();
+    getTodos();
   }, []);
 
   const fecthTodos = async () => {
@@ -57,7 +56,7 @@ function App() {
 
   const markTodo = async (id) => {
     // console.log(id)
-     const todoToToggle = await fetchTodo(id);
+    const todoToToggle = await fetchTodo(id);
     const updatedTodo = { status: !todoToToggle.status }
 
     const res = await fetch(`https://todo-list-app-atec.herokuapp.com/put/${id}`, {
@@ -68,27 +67,27 @@ function App() {
       body: JSON.stringify(updatedTodo),
     });
 
-	if(res.status === 200) {
+    if (res.status === 200) {
 
-		const data = await res.json();
+      const data = await res.json();
 
-		setTodos(
-		  todos.map((todo) =>
-			todo.id === id ? { ...todo, status: data.todo.status } : todo
-		  )
-		)
+      setTodos(
+        todos.map((todo) =>
+          todo.id === id ? { ...todo, status: data.todo.status } : todo
+        )
+      )
 
-	}
+    }
 
   }
 
   return (
     <div className="app">
       <div className="container black-container">
-	  	{/* <Header />		 */}
-		<AddToDo addTodo={addTodo}/>
-    <Todos todos={todos} removeTodo={removeTodo} markTodo={markTodo} />
-		{/* {todos.length > 0 ? (<Todos todos={todos} removeTodo={removeTodo} markTodo={markTodo} />) : ('No Todos To Show')}		 */}
+        <Header />
+        <AddToDo addTodo={addTodo} />
+        <Todos todos={todos} removeTodo={removeTodo} markTodo={markTodo} />
+        {/* {todos.length > 0 ? (<Todos todos={todos} removeTodo={removeTodo} markTodo={markTodo} />) : ('No Todos To Show')}		 */}
       </div>
     </div>
   );
