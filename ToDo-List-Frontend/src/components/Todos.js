@@ -2,12 +2,13 @@ import Todo from './Todo';
 import { Card } from 'react-bootstrap';
 
 const Todos = ({ todos, removeTodo, markTodo }) => {
+  console.log("todos",todos.length, markTodo.length)
   return (
     <div className='todo'>
 
-{/* Current */}
+      {/* Current */}
       <div className='block' >
-        <h2>{ todos.length > 1 ? "Current Tasks" : "Current Task"}</h2>
+        <h2>Current Tasks</h2>
 
         {!(todos.find(item => {
           return item.status === false
@@ -16,11 +17,10 @@ const Todos = ({ todos, removeTodo, markTodo }) => {
           : <></>
         }
         {todos.map(todo => (
-          <div>
-
+          <div key={todo.id}>
             {
-              (!todo.status ? <Card key={todo.id} class="card">
-                <Card.Body>
+              (!todo.status ? <Card key={todo.id} className="card">
+                <Card.Body className='current-card-body-background'>
                   <Todo
                     todo={todo}
                     markTodo={markTodo}
@@ -36,9 +36,9 @@ const Todos = ({ todos, removeTodo, markTodo }) => {
         ))}
       </div>
 
-{/* Finished task */}
+      {/* Finished task */}
       <div className='block'  >
-        <h2>{ markTodo.length > 1 ? "Finished Tasks" : "Finished Task"}</h2>
+        <h2>Finished Tasks</h2>
 
         {!(todos.find(item => {
           return item.status === true
@@ -48,11 +48,11 @@ const Todos = ({ todos, removeTodo, markTodo }) => {
         }
 
         {todos.map(todo => (
-          <div>
+          <div key={todo.id}>
 
             {
               (todo.status ? <Card key={todo.id}>
-                <Card.Body>
+                <Card.Body className='finished-card-body-background'>
                   <Todo
                     todo={todo}
                     markTodo={markTodo}

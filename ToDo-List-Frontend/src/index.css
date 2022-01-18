@@ -1,10 +1,24 @@
 .app {
-  padding: 30px;
+  padding   : 30px;
+  background: #8e9eab;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #eef2f3, #8e9eab);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #eef2f3, #8e9eab);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+.black-container {
+  background-color: #525a66;
+  padding         : 12px;
+  box-shadow      : rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  border-radius   : 10px;
 }
 
 .todo {
   /* align-items: center; */
-  display: flex;
-  font-size: 18px;
+  display        : flex;
+  font-size      : 18px;
   justify-content: space-around;
 }

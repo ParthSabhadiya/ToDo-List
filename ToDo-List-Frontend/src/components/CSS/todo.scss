@@ -1,92 +1,127 @@
-.Delete-button{
+.Delete-button {
     margin-right: 15px;
 }
 
-.todo{
+.todo {
     display: flex;
-    .block{
-        width: 500px;
-        // border-radius: 10%;
-        padding: 30px;
-        border: 1px solid #808000;
-        border-radius: 20px;
-        p{
+
+    .block {
+        width           : 500px;
+        padding         : 30px;
+        border-radius   : 20px;
+
+        p {
             text-align: center;
         }
     }
 
-    .br-10{
+    .br-10 {
         border-radius: 10%;
     }
-    span{
-        width: 300px;
+
+    span {
+        width     : 250px;
         word-break: break-word;
-    }    
-    .done-icon{
-        width: 40px;
+    }
+
+    .done-icon {
+        width : 40px;
         height: 28px;
         cursor: pointer;
     }
+
+    .remove-icon:hover {
+        color: red;
+    }
 }
 
-.block{
-    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-    padding: 15px;
-    
-    h2{
+.block {
+    box-shadow      : rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    padding         : 15px;
+    background-color: #8393a5;
+
+    h2 {
         text-align: center;
     }
 
-    .card{
-        border: 1px solid black;
-        margin-bottom: 10px;
+    .card {
+        // border       : 1px solid black;
+        margin-bottom   : 10px;
+        position        : relative;
+        display         : flex;
+        flex-direction  : column;
+        min-width       : 0;
+        word-wrap       : break-word;
+        background-clip : border-box;
+        background-color: transparent;
+        border          : none;
+        border-radius   : 0;
+    }
+
+    .current-card-body-background {
+        // background   : #3fe2a4;
+        background   : #bab86c;
+        border-radius: 12px;
+    }
+    .finished-card-body-background {
+         background   : #3fe2a4;
+         border-radius: 12px;       
     }
 }
 
-.add-new-todo{
-    margin: auto;
-    width: 50%;
-    border: 1px solid #808000;
-    padding: 10px;
-    display: flex;
+.add-new-todo {
+    margin         : auto;
+    width          : 50%;
+    padding        : 10px;
+    display        : flex;
     justify-content: space-between;
 
-    .add-button{
-        color:  #808000;
-        background: #BAB86C;
-        border: none;
+    .add-button {
+        color        : #3c3c02;
+        background   : #BAB86C;
+        border       : none;
         border-radius: 21px;
-        padding: 10px 20px 10px 20px;
+        padding      : 10px 20px 10px 20px;
     }
 }
 
-.navbar-brand{
-    font-size: 40px;
+.navbar-brand {
+    font-size  : 40px;
     font-weight: bold;
 }
 
 
-.bg-light{
-    // background: #BAB86C !important;
-     border: 1px solid #808000;
-    span{
+.bg-light {
+    border: 1px solid #808000;
+
+    span {
         color: #383801 !important;
     }
 }
-::placeholder {
-    color:  #808000;
-    opacity: 1; /* Firefox */
-  }
-  
-  :-ms-input-placeholder { /* Internet Explorer 10-11 */
-   color:  #808000;
-  }
-  
-  ::-ms-input-placeholder { /* Microsoft Edge */
-   color:  #808000;
-  }
 
-  input {
-    -webkit-appearance:  none;
-    -moz-appearance: none;
+::placeholder {
+    color  : #808000;
+    opacity: 1;
+    /* Firefox */
+}
+
+:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #808000;
+}
+
+::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #808000;
+}
+
+input {
+    -webkit-appearance: none;
+    -moz-appearance   : none;
+}
+
+.action-buttons {
+    display        : flex;
+    justify-content: space-around;
+    width          : 150px;
 }

@@ -6,10 +6,11 @@ import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 
 import './CSS/todo.scss'
 const Todo = ({ todo, removeTodo, markTodo }) => {
+
   return (
-    <div className="todo" >
+    <div className="todo" key={todo.id}>
       <span style={{ textDecoration: todo.status ? "line-through" : "" }}>{todo.name}</span>
-      <div>
+      <div className='action-buttons'>
         <OverlayTrigger
           delay={{ hide: 450, show: 300 }}
           overlay={(props) => (
@@ -19,10 +20,13 @@ const Todo = ({ todo, removeTodo, markTodo }) => {
           )}
           placement="bottom"
         >
+          <Button variant="light" onClick={() => markTodo(todo.id)}>          
           {!todo.status ?
-            <IoCheckmarkDoneCircle className='done-icon' onClick={() => markTodo(todo.id)} /> :
-            <VscIssueReopened className='done-icon' onClick={() => markTodo(todo.id)} />
+            <IoCheckmarkDoneCircle className='done-icon'  /> :
+            <VscIssueReopened className='done-icon'  onClick={() => markTodo(todo.id)} />
           }
+          </Button>
+
         </OverlayTrigger>
         <OverlayTrigger
           delay={{ hide: 450, show: 300 }}
@@ -33,7 +37,7 @@ const Todo = ({ todo, removeTodo, markTodo }) => {
           )}
           placement="bottom"
         >
-          <BsFillTrashFill className='done-icon' onClick={() => removeTodo(todo.id)} />
+          <Button variant="light"><BsFillTrashFill className='done-icon remove-icon' onClick={() => removeTodo(todo.id)} /></Button>
         </OverlayTrigger>
       </div>
     </div>

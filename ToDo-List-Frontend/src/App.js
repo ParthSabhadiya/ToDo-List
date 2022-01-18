@@ -84,8 +84,8 @@ function App() {
 
   return (
     <div className="app">
-      <div className="container">
-	  	<Header />		
+      <div className="container black-container">
+	  	{/* <Header />		 */}
 		<AddToDo addTodo={addTodo}/>
     <Todos todos={todos} removeTodo={removeTodo} markTodo={markTodo} />
 		{/* {todos.length > 0 ? (<Todos todos={todos} removeTodo={removeTodo} markTodo={markTodo} />) : ('No Todos To Show')}		 */}
