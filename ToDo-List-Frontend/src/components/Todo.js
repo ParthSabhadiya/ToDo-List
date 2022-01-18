@@ -2,8 +2,7 @@ import { Button } from 'react-bootstrap';
 import { BsFillTrashFill } from 'react-icons/bs'
 import { IoCheckmarkDoneCircle } from 'react-icons/io5'
 import { VscIssueReopened } from "react-icons/vsc";
-import { Tooltip } from 'react-bootstrap/Tooltip';
-import { OverlayTrigger } from 'react-bootstrap/OverlayTrigger'
+import { Tooltip, OverlayTrigger } from 'react-bootstrap';
 
 import './CSS/todo.scss'
 const Todo = ({ todo, removeTodo, markTodo }) => {
